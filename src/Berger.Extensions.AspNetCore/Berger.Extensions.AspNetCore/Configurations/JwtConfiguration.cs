@@ -1,4 +1,5 @@
-﻿using Berger.Extensions.Abstractions;
+﻿using Berger.Extensions.Jwt;
+using Berger.Extensions.Abstractions;
 using Microsoft.Extensions.Configuration;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.Extensions.DependencyInjection;

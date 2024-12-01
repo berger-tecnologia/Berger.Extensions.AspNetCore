@@ -1,4 +1,6 @@
 ﻿using System.Security.Claims;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Berger.Extensions.AspNetCore
 {
@@ -15,6 +17,18 @@ namespace Berger.Extensions.AspNetCore
             }
 
             return null;
+        }
+        public static string GetClaims(this HttpContext context, string claim)
+        {
+            return GetClaims(context.User, claim);
+        }
+        public static string GetClaims(this AuthorizationHandlerContext context, string claim)
+        {
+            return GetClaims(context.User, claim);
+        }
+        public static string GetClaims(this ClaimsPrincipal claimPrincipal, string claim)
+        {
+            return claimPrincipal.FindFirstValue(claim);
         }
         public static bool IsInRole(this ClaimsPrincipal claims, string role) => claims.IsInRole(role);
         public static bool IsNotInRole(this ClaimsPrincipal claims, string role) => !claims.IsInRole(role);

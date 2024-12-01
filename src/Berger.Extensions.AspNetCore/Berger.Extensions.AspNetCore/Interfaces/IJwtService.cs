@@ -1,4 +1,5 @@
-﻿using System.Security.Claims;
+﻿using Berger.Extensions.Jwt;
+using System.Security.Claims;
 
 namespace Berger.Extensions.AspNetCore
 {
