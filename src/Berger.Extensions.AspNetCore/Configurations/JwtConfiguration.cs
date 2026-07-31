@@ -60,10 +60,10 @@ namespace Berger.Extensions.AspNetCore
         {
             services.AddAuthorization(auth =>
             {
-                auth.AddPolicy(Standards.Bearer, new AuthorizationPolicyBuilder()
-                    .AddAuthenticationSchemes(JwtBearerDefaults.AuthenticationScheme‌​)
-                    .RequireAuthenticatedUser()
-                    .Build());
+                //auth.AddPolicy(Standards.Bearer, new AuthorizationPolicyBuilder()
+                //    .AddAuthenticationSchemes(JwtBearerDefaults.AuthenticationScheme‌​)
+                //    .RequireAuthenticatedUser()
+                //    .Build());
             });
 
             return services;

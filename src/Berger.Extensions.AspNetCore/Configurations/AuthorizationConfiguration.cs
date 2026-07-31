@@ -1,25 +1,25 @@
-﻿using System.Text;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Builder;
-using Berger.Extensions.Abstractions;
+﻿//using System.Text;
+//using Microsoft.AspNetCore.Http;
+//using Microsoft.AspNetCore.Builder;
+//using Berger.Extensions.Abstractions;
 
-namespace Berger.Extensions.AspNetCore
-{
-    public static class AuthorizationConfiguration
-    {
-        public static void ConfigureJwtHeaders(this IApplicationBuilder app)
-        {
-            app.Use(async (context, next) =>
-            {
-                var token = context.Session.GetString(Standards.Token);
+//namespace Berger.Extensions.AspNetCore
+//{
+//    public static class AuthorizationConfiguration
+//    {
+//        public static void ConfigureJwtHeaders(this IApplicationBuilder app)
+//        {
+//            app.Use(async (context, next) =>
+//            {
+//                var token = context.Session.GetString(Standards.Token);
 
-                if (!string.IsNullOrEmpty(token))
-                {
-                    context.Request.Headers.Append(Standards.Authorization, Standards.Bearer + token);
-                }
+//                if (!string.IsNullOrEmpty(token))
+//                {
+//                    context.Request.Headers.Append(Standards.Authorization, Standards.Bearer + token);
+//                }
 
-                await next();
-            });
-        }
-    }
-}
+//                await next();
+//            });
+//        }
+//    }
+//}

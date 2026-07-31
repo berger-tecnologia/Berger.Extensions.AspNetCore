@@ -55,7 +55,7 @@ namespace Berger.Extensions.AspNetCore
         {
             var ip = GetIp();
 
-            _acessor.HttpContext.Session.Remove(Standards.Token);
+            //_acessor.HttpContext.Session.Remove(Standards.Token);
         }
         private async Task<bool> CheckIp(Guid sessionId, string ip)
         {

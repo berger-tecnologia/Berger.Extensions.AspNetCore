@@ -34,8 +34,8 @@ namespace Berger.Extensions.AspNetCore
         {
             var token = context.GetHeader(HeaderNames.Authorization);
 
-            if (!string.IsNullOrEmpty(token))
-                return token.Replace(Standards.Bearer, string.Empty);
+            //if (!string.IsNullOrEmpty(token))
+            //    return token.Replace(Standards.Bearer, string.Empty);
 
             return string.Empty;
         }
